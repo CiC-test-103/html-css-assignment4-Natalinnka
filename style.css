@@ -47,7 +47,244 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 30px;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-paleBlue);
+  border-radius: 30px;
+}
+
+.card-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background:hsl(0, 0%, 100%)
+  
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+  border-radius: 30px;
+  box-shadow: 20px 20px 30px hsla(241, 100%, 89%, 0.422);
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+  border-radius: 30px;
+}
+
+.result h2 {
+  font-size: 23px;
+  color:hsla(0, 0%, 100%, 0.6);
+  margin: 30px;
+  font-weight: 700;
+}
+
+.result .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(hsl(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0.031));
+}
+
+.result .circle .number {
+  font-size: 65px;
+  font-weight: 700;
+  margin-top: 40px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.result .circle .sub-number {
+  text-align: center;
+  color:hsla(0, 0%, 100%, 0.3);
+  text-shadow: 20px 20px 20px 20px hsla(241, 72%, 46%, 0.977); 
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: -10px;
+  display: block;
+}
+
+.result .great {
+  font-size: 30px;
+  margin: 15px 0;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.result p {
+  font-size: 18px;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-top: -5px;
+  margin-bottom: 45px;
+  width: 250px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.value {
+  width: 50%;
+  padding: 40px;
+}
+
+.value h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color:rgba(48, 59, 90, 1);
+  font-weight: 800;
+}
+
+.red {
+color: hsl(0, 100%, 67%);
+background: hsla(0, 100%, 67%, 0.05);
+}
+
+.yellow {
+  color: hsl(39, 100%, 56%);
+  background: hsla(39, 100%, 56%, 0.05) ;
+}
+
+.green {
+  color: hsl(167, 92%, 38%);
+  background: hsla(168, 88%, 40%, 0.05);
+}
+
+.blue {
+  color: hsl(234, 85%, 45%);
+  background:hsla(234, 85%, 45%, 0.05);
+}
+
+.value .box {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 15px;
+  margin: 18px 0;
+  border-radius: 15px;
+}
+
+.value img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.value p {
+  flex-grow: 3;
+  font-weight: 700;
+}
+
+.value .number {
+  font-weight: 800;
+  color: hsla(168, 100%, 3%, 0.7);
+}
+
+.value .sub-number {
+  color: rgba(48, 59, 90, 0.581);
+  font-weight: 800;
+}
+
+.value .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  background: hsl(224, 30%, 27%);
+  height: 55px;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.value .btn:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
 
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+ }
+
+.attribution a {
+   color: hsl(228, 45%, 44%);
+ }
+
+ /* Media Queries for Mobile */
+ 
+@media (max-width: 375px) {
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .result {
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .result h2 {
+    font-size: 18px;
+    margin-top: 15px 0;
+    font-weight: 500;
+  }
+
+  .result .circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .result .circle .number {
+    font-size: 48px;
+    margin-top: 30px;
+  }
+
+  .result .circle .sub-number {
+    font-size: 15px;
+  }
+
+  .result .great {
+    font-size: 18px;
+  }
+
+  .result p {
+    font-size: 15px;
+  }
+
+  .value h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .value {
+    width: 100%;
+    padding: 30px;
+  }
+}
